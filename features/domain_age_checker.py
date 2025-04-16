@@ -3,10 +3,9 @@
 import streamlit as st
 import requests
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-API_KEY = os.getenv("IPQS_API_KEY")
+API_KEY = st.secrets["IPQS_API_KEY"]
+
 
 def domain_age_checker():
     st.header("⏳ Domain Age Checker")
